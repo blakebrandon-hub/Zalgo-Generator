@@ -466,9 +466,7 @@ def zalgo_api():
         return jsonify({"zalgo": result})
         
     except Exception as e:
-        # Basic error handling
         return jsonify({"error": "Something went wrong"}), 400
 
 if __name__ == "__main__":
-    # Run in debug mode for development
     app.run(debug=True, host="127.0.0.1", port=5000)
