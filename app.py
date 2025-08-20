@@ -105,7 +105,7 @@ HTML_PAGE = """
             padding: 0;
             background: var(--bg-color);
             color: var(--text-color);
-            font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-family: sans-serif;
             font-size: 16px;
             line-height: 1.5;
         }
@@ -470,3 +470,4 @@ def zalgo_api():
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=5000)
+
