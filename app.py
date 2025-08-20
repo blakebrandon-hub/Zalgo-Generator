@@ -86,200 +86,231 @@ HTML_PAGE = """
           href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgZmlsbD0idHJhbnNwYXJlbnQiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiCiAgICAgIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSBFbW9qaSBBcHBsZSBDb2xvciBFbW9qaSwgTm90byBDb2xvciBFbW9qaSIKICAgICAgZm9udC1zaXplPSI5NiI+8J+MgDwvdGV4dD4KPC9zdmc+">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Dark theme because zalgo text deserves it */
-        :root {
-            --bg-color: #0a0b10;
-            --text-color: #e8e8ff;
-            --muted-color: #9aa3b2;
-            --card-bg: #121420;
-            --accent: #7c4dff;
-            --border: #1f2433;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            background: var(--bg-color);
-            color: var(--text-color);
-            font-family: sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-            margin-bottom: 20px;
-        }
-        
-        h1 {
-            margin: 0 0 16px 0;
-            font-size: 28px;
-            font-weight: 700;
-        }
-        
-        h2 {
-            margin: 0 0 8px 0;
-            font-size: 20px;
-        }
-        
-        .header-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-        
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        
-        @media (min-width: 800px) {
-            .main-grid {
-                grid-template-columns: 2fr 1fr;
-            }
-        }
-        
-        label {
-            display: block;
-            margin: 12px 0 6px 0;
-            color: var(--muted-color);
-            font-weight: 500;
-        }
-        
-        textarea, input[type="text"] {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: 12px;
-            border: 1px solid #22283a;
-            background: #0e1018;
-            color: var(--text-color);
-            font-family: inherit;
-            font-size: 14px;
-        }
-        
-        textarea:focus, input[type="text"]:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-        
-        .controls {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            flex-wrap: wrap;
-            color: var(--muted-color);
-            margin-top: 10px;
-        }
-        
-        .controls label {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .btn {
-            appearance: none;
-            border: none;
-            border-radius: 12px;
-            background: var(--accent);
-            color: white;
-            padding: 12px 16px;
-            font-weight: 600;
-            cursor: pointer;
-            font-family: inherit;
-            transition: background 0.2s;
-        }
-        
-        .btn:hover {
-            background: #6c42d9;
-        }
-        
-        .btn.secondary {
-            background: #1e2233;
-        }
-        
-        .btn.secondary:hover {
-            background: #252a3f;
-        }
-        
-        .output-box {
-            background: #0e1018;
-            border: 1px solid #22283a;
-            border-radius: 12px;
-            padding: 12px 14px;
-            white-space: pre-wrap;
-            word-break: break-word;
-            min-height: 120px;
-            font-family: monospace;
-            overflow-wrap: anywhere;
-        }
-        
-        .button-row {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        
-        small {
-            color: var(--muted-color);
-        }
-        
-        code {
-            background: #0e1018;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        
-        pre {
-            background: #0e1018;
-            border: 1px solid #22283a;
-            border-radius: 12px;
-            padding: 12px;
-            overflow: auto;
-            margin: 12px 0;
-        }
-        
-        .coffee-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #7c4dff;
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-        
-        .coffee-btn:hover {
-            background: #6c42d9;;
-        }
-        
-        .coffee-icon {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
+/* ===== Zalgo Generator – Full CSS (mobile-polished) ===== */
+:root {
+  --bg-color: #0a0b10;
+  --text-color: #e8e8ff;
+  --muted-color: #9aa3b2;
+  --card-bg: #121420;
+  --accent: #7c4dff;
+  --border: #1f2433;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px; /* prevent iOS zoom on body text */
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 800px) {
+  .main-grid { grid-template-columns: 2fr 1fr; }
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px 0;
+  color: var(--muted-color);
+  font-weight: 500;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #22283a;
+  background: #0e1018;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 16px; /* iOS focus zoom guard */
+  line-height: 1.9; /* breathing room for combining marks */
+}
+
+textarea:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.25);
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--muted-color);
+  margin-top: 10px;
+}
+
+.controls label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type="range"] {
+  width: 260px;
+  max-width: 100%;
+  accent-color: var(--accent);
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform .06s ease, background .2s ease;
+  will-change: transform;
+}
+
+.btn:hover { background: #6c42d9; }
+
+.btn:active { transform: translateY(1px); }
+
+.btn.secondary {
+  background: #1e2233;
+  color: var(--text-color);
+}
+
+.btn.secondary:hover { background: #252a3f; }
+
+.output-box {
+  background: #0e1018;
+  border: 1px solid #22283a;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 120px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 16px;         /* stable caret on iOS */
+  line-height: 2.0;        /* extra leading for tall diacritics */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere; /* break long cursed runs */
+  word-break: normal;      /* avoid over-aggressive grapheme breaks */
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+small { color: var(--muted-color); }
+
+code {
+  background: #0e1018;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+pre {
+  background: #0e1018;
+  border: 1px solid #22283a;
+  border-radius: 12px;
+  padding: 12px;
+  overflow: auto;
+  margin: 12px 0;
+}
+
+/* Buy-me-a-coffee */
+.coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #7c4dff;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background .2s ease, transform .06s ease;
+}
+
+.coffee-btn:hover { background: #6c42d9; }
+
+.coffee-btn:active { transform: translateY(1px); }
+
+.coffee-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ==== Mobile polish ==== */
+@media (max-width: 600px) {
+  .container { margin: 16px auto; padding: 12px; }
+  .controls { flex-direction: column; align-items: stretch; gap: 10px; }
+  .button-row { flex-direction: column; align-items: stretch; }
+  textarea { min-height: 160px; }
+  .output-box { min-height: 160px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  .header-row { gap: 8px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .coffee-btn { transition: none; }
+}
+
     </style>
 </head>
 <body>
@@ -466,8 +497,9 @@ def zalgo_api():
         return jsonify({"zalgo": result})
         
     except Exception as e:
+        # Basic error handling
         return jsonify({"error": "Something went wrong"}), 400
 
 if __name__ == "__main__":
+    # Run in debug mode for development
     app.run(debug=True, host="127.0.0.1", port=5000)
-
