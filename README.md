@@ -4,7 +4,7 @@ A Flask web app that transforms normal text into cursed zalgo text using Unicode
 
 ## What is Zalgo Text?
 
-Zalgo text (also known as "cursed text" or "glitch text") uses Unicode combining characters to create text that appears corrupted or glitched. It's named after the creepypasta character Zalgo and has become popular in memes and social media.
+Zalgo text (also known as "cursed text" or "glitch text") uses Unicode combining characters to create text that appears corrupted or glitched. 
 
 ## Features
 
@@ -110,7 +110,4 @@ Use responsibly! Zalgo text can:
 - Break some older systems or applications  
 - Get your messages flagged as spam on some platforms
 - Cause existential dread in typography enthusiasts
-
----
-
-*"He comes"* - Zalgo
+- 
